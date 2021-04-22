@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c129c55-0ddc-4183-8c5c-1ef2fe7ac64a" name="Default Changelist" comment="" />
+    <list default="true" id="7c129c55-0ddc-4183-8c5c-1ef2fe7ac64a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wwqi/dao/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wwqi/dao/NoticeMapper.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +19,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -41,6 +49,9 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1qhhY7uzkJYNKmLLspCQ3Zi50VD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -56,9 +67,27 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.TestSpring.test1">
+    <configuration name="TestSpring.test1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="qc_music_ back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.wwqi.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.wwqi.test" />
+      <option name="MAIN_CLASS_NAME" value="top.wwqi.test.TestSpring" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/qc_music__back_war_exploded/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -133,6 +162,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TestSpring.test1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -144,11 +178,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -170,6 +199,10 @@
       <workItem from="1617537777574" duration="3669000" />
       <workItem from="1618928018947" duration="1326000" />
       <workItem from="1618997551109" duration="11390000" />
+      <workItem from="1619076274015" duration="700000" />
+      <workItem from="1619077076450" duration="628000" />
+      <workItem from="1619079026681" duration="6882000" />
+      <workItem from="1619105773810" duration="96000" />
     </task>
     <servers />
   </component>
@@ -177,33 +210,39 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617538220160">
+    <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619079008228">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
+    <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619079008228" />
     <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1122@0.0.2048.1122" timestamp="1617538220160" />
-    <state x="830" y="277" key="#com.intellij.ide.util.MemberChooser" timestamp="1619008061719">
-      <screen x="0" y="0" width="2048" height="1122" />
+    <state x="623" y="206" key="#com.intellij.ide.util.MemberChooser" timestamp="1619088440592">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="623" y="206" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619088440592" />
     <state x="830" y="277" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619008061719" />
-    <state width="1604" height="309" key="GridCell.Tab.0.bottom" timestamp="1617548163668">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1619105758040">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.0.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619092439547" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758040" />
     <state width="1604" height="309" key="GridCell.Tab.0.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.0.center" timestamp="1617548163668">
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1619105758039">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.0.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619092439546" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758039" />
     <state width="1604" height="309" key="GridCell.Tab.0.center/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.0.left" timestamp="1617548163668">
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1619105758039">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.0.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619092439544" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758039" />
     <state width="1604" height="309" key="GridCell.Tab.0.left/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.0.right" timestamp="1617548163668">
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1619105758040">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.0.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619092439546" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758040" />
     <state width="1604" height="309" key="GridCell.Tab.0.right/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
     <state width="1604" height="309" key="GridCell.Tab.1.bottom" timestamp="1617548163668">
       <screen x="0" y="0" width="2048" height="1122" />
@@ -245,5 +284,17 @@
     </state>
     <state width="1604" height="309" key="GridCell.Tab.2.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
     <state width="1604" height="309" key="GridCell.Tab.2.right/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265383" />
+    <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1619092404053">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1619092404053" />
+    <state x="811" y="283" key="RollbackChangesDialog" timestamp="1619082657667">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="811" y="283" key="RollbackChangesDialog/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619082657667" />
+    <state x="526" y="203" key="SettingsEditor" timestamp="1619105869821">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="526" y="203" key="SettingsEditor/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105869821" />
   </component>
 </project>

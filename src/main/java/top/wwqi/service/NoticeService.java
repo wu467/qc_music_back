@@ -1,12 +1,8 @@
-package top.wwqi.dao;
+package top.wwqi.service;
 
 import top.wwqi.entity.Notice;
 
-/**
- * 系统通知的mapper
- */
-public interface NoticeMapper {
-
+public interface NoticeService {
     /**
      * 添加系统通知
      * @return
@@ -17,5 +13,5 @@ public interface NoticeMapper {
      * 删除系统通知
      * @return
      */
-    Integer delNotice(Integer notice_Id);
+    void delNotice(int notice_Id);
 }
