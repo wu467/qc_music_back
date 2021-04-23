@@ -2,14 +2,68 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="qc_music_ back:war exploded" />
+      <artifact name="qc_music_ back:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c129c55-0ddc-4183-8c5c-1ef2fe7ac64a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/wwqi/dao/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wwqi/dao/NoticeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wwqi/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wwqi/entity/Notice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wwqi/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wwqi/service/NoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wwqi/service/impl/NoticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/wwqi/service/impl/NoticeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/wwqi/test/TestSpring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wwqi/dao/NoticeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wwqi/dao/NoticeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wwqi/entity/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wwqi/entity/Notice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wwqi/service/NoticeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wwqi/service/NoticeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wwqi/service/impl/NoticeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/top/wwqi/service/impl/NoticeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/top/wwqi/test/TestSpring.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/classes/top/wwqi/dao/NoticeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/classes/top/wwqi/dao/SongMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/classes/top/wwqi/entity/Notice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/classes/top/wwqi/entity/Song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/classes/top/wwqi/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/aspectjrt-1.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/aspectjweaver-1.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/c3p0-0.9.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/cglib-nodep-3.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/commons-collections-3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/commons-fileupload-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/jackson-annotations-2.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/jackson-core-2.8.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/jackson-databind-2.8.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/logback-classic-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/logback-core-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/mybatis-3.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/mysql-connector-java-5.1.37.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-aop-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-aspects-4.3.10.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-test-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-web-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/lib/thumbnailator-0.4.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/qc_music_ back/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +74,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -61,15 +116,56 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="TestNG.TestSpring.test1">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProject\qc_music_ back\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.31">
+    <configuration name="TestSpring.run1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qc_music_ back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.wwqi.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.wwqi.test" />
+      <option name="MAIN_CLASS_NAME" value="top.wwqi.test.TestSpring" />
+      <option name="METHOD_NAME" value="run1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSpring.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qc_music_ back" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.wwqi.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.wwqi.test" />
+      <option name="MAIN_CLASS_NAME" value="top.wwqi.test.TestSpring" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestSpring.test1" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="qc_music_ back" />
       <extension name="coverage">
@@ -89,13 +185,12 @@
       </method>
     </configuration>
     <configuration name="Tomcat 8.5.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/qc_music__back_war_exploded/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="qc_music_ back:war exploded">
+        <artifact name="qc_music_ back:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/qc_music__back_war_exploded" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -158,12 +253,20 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="qc_music_ back:war exploded" />
+          <artifact name="qc_music_ back:war" />
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.TestSpring.test1" />
+      <item itemvalue="JUnit.TestSpring.run1" />
+      <item itemvalue="TestNG.TestSpring.test1" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.31" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestSpring.run1" />
+        <item itemvalue="JUnit.TestSpring.test1" />
         <item itemvalue="TestNG.TestSpring.test1" />
       </list>
     </recent_temporary>
@@ -172,12 +275,17 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.18775304" />
+          <option name="contentProportion" value="0.16649798" />
           <treeState>
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -202,7 +310,15 @@
       <workItem from="1619076274015" duration="700000" />
       <workItem from="1619077076450" duration="628000" />
       <workItem from="1619079026681" duration="6882000" />
-      <workItem from="1619105773810" duration="96000" />
+      <workItem from="1619105773810" duration="237000" />
+      <workItem from="1619138962670" duration="4613000" />
+      <workItem from="1619157488832" duration="3000" />
+      <workItem from="1619160122304" duration="76000" />
+      <workItem from="1619160739587" duration="629000" />
+      <workItem from="1619163327094" duration="2638000" />
+      <workItem from="1619166265344" duration="1665000" />
+      <workItem from="1619167993125" duration="3549000" />
+      <workItem from="1619174910304" duration="1977000" />
     </task>
     <servers />
   </component>
@@ -210,91 +326,105 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619079008228">
+    <state x="361" y="79" key="#Project_Structure" timestamp="1619163956680">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="79" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1619163956680" />
+    <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619142159436">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619079008228" />
+    <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619142159436" />
     <state x="479" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1122@0.0.2048.1122" timestamp="1617538220160" />
-    <state x="623" y="206" key="#com.intellij.ide.util.MemberChooser" timestamp="1619088440592">
+    <state x="623" y="206" key="#com.intellij.ide.util.MemberChooser" timestamp="1619167253475">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="623" y="206" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619088440592" />
-    <state x="830" y="277" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619008061719" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1619105758040">
+    <state x="623" y="206" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1619167253475" />
+    <state x="830" y="277" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619139816091" />
+    <state width="1646" height="411" key="GridCell.Tab.0.bottom" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619092439547" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758040" />
-    <state width="1604" height="309" key="GridCell.Tab.0.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1619105758039">
+    <state width="1493" height="329" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619168415762" />
+    <state width="1646" height="411" key="GridCell.Tab.0.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.0.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.0.center" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619092439546" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758039" />
-    <state width="1604" height="309" key="GridCell.Tab.0.center/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1619105758039">
+    <state width="1493" height="329" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1619168415762" />
+    <state width="1646" height="411" key="GridCell.Tab.0.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.0.center/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.0.left" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619092439544" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758039" />
-    <state width="1604" height="309" key="GridCell.Tab.0.left/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1619105758040">
+    <state width="1493" height="329" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1619168415762" />
+    <state width="1646" height="411" key="GridCell.Tab.0.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.0.left/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.0.right" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619092439546" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105758040" />
-    <state width="1604" height="309" key="GridCell.Tab.0.right/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.1.bottom" timestamp="1617548163668">
+    <state width="1493" height="329" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1619168415762" />
+    <state width="1646" height="411" key="GridCell.Tab.0.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.0.right/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.1.bottom" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.1.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.1.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.1.center" timestamp="1617548163668">
+    <state width="1219" height="306" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.1.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.1.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.1.center" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.1.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.1.center/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.1.left" timestamp="1617548163668">
+    <state width="1219" height="306" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.1.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.1.center/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.1.left" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.1.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.1.left/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.1.right" timestamp="1617548163668">
+    <state width="1219" height="306" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.1.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.1.left/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.1.right" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.1.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.1.right/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265382" />
-    <state width="1604" height="309" key="GridCell.Tab.2.bottom" timestamp="1617548163668">
+    <state width="1219" height="306" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.1.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.1.right/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.2.bottom" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.2.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.2.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265383" />
-    <state width="1604" height="309" key="GridCell.Tab.2.center" timestamp="1617548163668">
+    <state width="1219" height="306" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.2.bottom/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.2.bottom/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.2.center" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.2.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.2.center/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265383" />
-    <state width="1604" height="309" key="GridCell.Tab.2.left" timestamp="1617548163668">
+    <state width="1219" height="306" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.2.center/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.2.center/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.2.left" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.2.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.2.left/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265383" />
-    <state width="1604" height="309" key="GridCell.Tab.2.right" timestamp="1617548163668">
+    <state width="1219" height="306" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.2.left/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.2.left/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state width="1646" height="411" key="GridCell.Tab.2.right" timestamp="1619192024347">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state width="1604" height="309" key="GridCell.Tab.2.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1617548163668" />
-    <state width="1604" height="309" key="GridCell.Tab.2.right/0.0.2048.1122@0.0.2048.1122" timestamp="1617538265383" />
-    <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1619092404053">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1219" height="306" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1619166226543" />
+    <state width="1646" height="411" key="GridCell.Tab.2.right/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619176290005" />
+    <state width="1646" height="411" key="GridCell.Tab.2.right/0.0.2048.1122@0.0.2048.1122" timestamp="1619192024347" />
+    <state x="881" y="249" width="938" height="664" key="Maven.ArtifactSearchDialog" timestamp="1619139175512">
+      <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1619092404053" />
+    <state x="881" y="249" width="938" height="664" key="Maven.ArtifactSearchDialog/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619139175512" />
     <state x="811" y="283" key="RollbackChangesDialog" timestamp="1619082657667">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="811" y="283" key="RollbackChangesDialog/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619082657667" />
-    <state x="526" y="203" key="SettingsEditor" timestamp="1619105869821">
+    <state x="526" y="203" key="SettingsEditor" timestamp="1619175093587">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="526" y="203" key="SettingsEditor/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619105869821" />
+    <state x="395" y="119" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1619166330032" />
+    <state x="526" y="203" key="SettingsEditor/0.0.2048.1122/-1920.358.1536.834@0.0.2048.1122" timestamp="1619175093587" />
   </component>
 </project>

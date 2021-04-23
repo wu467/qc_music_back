@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--开启注解扫描-->
+    <context:component-scan base-package="top.wwqi">
+        <!--配置哪些注解不被扫描-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+
+    <!--Spring整合MyBatis框架-->
+    <!--配置连接池-->
+    <!-- 配置C3P0的连接池对象 -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql:///qc_music" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+    </bean>
+
+    <!--配置SqlSessionFactory工厂-->
+    <!--为什么要配这个：配了这个就相当于Ioc容器中有了Factory。Factory能帮我们创建session，
+        有了session就能帮我们拿到代理对象。所以容器中有了这个就相当于容器中有了代理对象-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!--配置NoticeMapper接口所在的包-->
+    <!--为什么要配这个：原因是我得帮你生成哪些接口的代理对象，你得把这个包告诉我，我才能生成它们的代理对象-->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="top.wwqi.dao"/>
+    </bean>
+
+</beans>

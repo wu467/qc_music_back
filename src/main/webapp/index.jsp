@@ -1,5 +1,10 @@
+<!--index.jsp中-->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<head>
+    <title>test</title>
+</head>
 <body>
-<h2>Hello World!</h2>
+<a href="/notice/findAllNotice">查询所有系统通知</a>
 </body>
 </html>

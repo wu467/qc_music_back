@@ -1,7 +1,12 @@
 package top.wwqi.service;
 
+import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 import top.wwqi.entity.Notice;
 
+import java.util.List;
+
+@Repository
 public interface NoticeService {
     /**
      * 添加系统通知
@@ -14,4 +19,11 @@ public interface NoticeService {
      * @return
      */
     void delNotice(int notice_Id);
+
+    /**
+     * 获取所有系统通知
+     * @return
+     */
+    @Select("select * from notice")
+    List<Notice> findAllNotice();
 }

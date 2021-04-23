@@ -6,6 +6,7 @@ package top.wwqi.entity;
 public class Notice {
     private Integer id;
     private String content;
+
     private Boolean showNotice; //是否展示该条通知
 
     public Integer getId() {
@@ -30,5 +31,14 @@ public class Notice {
 
     public void setShowNotice(Boolean showNotice) {
         this.showNotice = showNotice;
+    }
+
+    @Override
+    public String toString() {
+        return "Notice{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", showNotice=" + showNotice +
+                '}';
     }
 }
