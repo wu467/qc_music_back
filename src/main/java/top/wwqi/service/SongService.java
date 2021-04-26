@@ -1,7 +1,6 @@
 package top.wwqi.service;
 
-import top.wwqi.entity.Song;
-import top.wwqi.entity.User;
+import top.wwqi.model.entity.Song;
 
 import java.util.List;
 

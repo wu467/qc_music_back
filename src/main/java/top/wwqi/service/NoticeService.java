@@ -2,7 +2,7 @@ package top.wwqi.service;
 
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
-import top.wwqi.entity.Notice;
+import top.wwqi.model.entity.Notice;
 
 import java.util.List;
 

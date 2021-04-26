@@ -3,7 +3,7 @@ package top.wwqi.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.wwqi.dao.NoticeMapper;
-import top.wwqi.entity.Notice;
+import top.wwqi.model.entity.Notice;
 import top.wwqi.service.NoticeService;
 
 import java.util.List;
@@ -19,18 +19,36 @@ public class NoticeServiceImpl implements NoticeService {
      */
     @Override
     public void insertNotice(Notice notice) {
-        System.out.println("Service层，添加系统通知");
+        Boolean isShow; //是否显示通知
+        try {
+            noticeMapper.insertNotice(notice);
+            System.out.println("Service层，添加系统通知");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("通知添加失败");
+        }
     }
 
     /**
      * 根据通知id删除
-     * @param notice_Id
+     * @param notice_id 系统通知id
      */
     @Override
-    public void delNotice(int notice_Id) {
-//        System.out.println("Service层，删除系统通知id:"+notice_Id);
+    public void delNotice(int notice_id) {
+        System.out.println("Service层，删除系统通知id:"+notice_id);
+
+        try {
+            noticeMapper.delNotice(notice_id);
+        } catch(Exception e) {
+            e.printStackTrace();
+            System.out.println("删除失败");
+        }
     }
 
+    /**
+     * 查找所有系统通知
+     * @return
+     */
     @Override
     public List<Notice> findAllNotice() {
         List<Notice> list = noticeMapper.findAllNotice();

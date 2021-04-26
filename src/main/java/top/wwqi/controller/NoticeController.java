@@ -2,10 +2,11 @@ package top.wwqi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import top.wwqi.entity.Notice;
+import org.springframework.web.bind.annotation.ResponseBody;
+import top.wwqi.model.entity.Notice;
 import top.wwqi.service.NoticeService;
+import top.wwqi.utils.api.JsonResult;
 
 import java.util.List;
 
@@ -16,14 +17,47 @@ public class NoticeController {
     @Autowired
     private NoticeService noticeService;
 
+    /**
+     * 查找所有系统通知
+     * @return
+     */
     @RequestMapping("findAllNotice")
-    public String testSpringMVC(Model model){
-        System.out.println("表现层查询所有歌曲");
-
+    @ResponseBody
+    public JsonResult<List<Notice>> findAllNotice(){
+        System.out.println("表现层查询所有系统通知 test");
         //调用service的方法
         List<Notice> list = noticeService.findAllNotice();
-        model.addAttribute("list",list);
-
-        return "success";
+        return new JsonResult<>(list);
     }
+
+    /**
+     * 添加系统通知
+     * @param notice
+     * @return
+     */
+    @RequestMapping("insertNotice")
+    @ResponseBody
+    public JsonResult insertNotice(Notice notice){
+        System.out.println("表现层 插入 系统通知");
+        String content = notice.getContent();
+        Boolean showNotice = notice.getShowNotice();
+        //调用service的方法
+        noticeService.insertNotice(notice);
+        return new JsonResult(200,"添加成功");
+    }
+
+    /**
+     * 删除系统通知
+     * @param id 系统通知id
+     * @return
+     */
+    @RequestMapping("delNotice")
+    @ResponseBody
+    public JsonResult deleteNotice(int id){
+        //调用service的方法
+        noticeService.delNotice(4);
+        return new JsonResult(200,"删除成功");
+    }
+
+
 }

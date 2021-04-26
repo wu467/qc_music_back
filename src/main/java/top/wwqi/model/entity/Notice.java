@@ -1,12 +1,15 @@
-package top.wwqi.entity;
+package top.wwqi.model.entity;
+
+import java.io.Serializable;
 
 /**
  * 系统通知栏实体
  */
-public class Notice {
+public class Notice implements Serializable {
+    private static final long serialVersionUID = 4227364879546435623L;
+
     private Integer id;
     private String content;
-
     private Boolean showNotice; //是否展示该条通知
 
     public Integer getId() {

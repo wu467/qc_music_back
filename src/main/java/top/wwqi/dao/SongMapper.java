@@ -1,6 +1,6 @@
 package top.wwqi.dao;
 
-import top.wwqi.entity.Song;
+import top.wwqi.model.entity.Song;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package top.wwqi.service.impl;
 
 import org.springframework.stereotype.Service;
-import top.wwqi.entity.Song;
+import top.wwqi.model.entity.Song;
 import top.wwqi.service.SongService;
 
 import java.util.List;

@@ -1,12 +1,15 @@
-package top.wwqi.entity;
+package top.wwqi.model.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * 歌曲实体类
  * 与User为多对多关系
  */
-public class Song {
+public class Song implements Serializable {
+    private static final long serialVersionUID = -3403484846021090945L;
+
     private Integer songId;  //主键
     private String songMid;  //歌曲唯一标识
     private List[] allUser;  //收藏该歌曲的所有用户
