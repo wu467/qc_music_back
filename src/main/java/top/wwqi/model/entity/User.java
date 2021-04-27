@@ -1,6 +1,7 @@
 package top.wwqi.model.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *  普通用户实体
@@ -8,12 +9,14 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
     private static final long serialVersionUID = -7671703873445055025L;
-    private Integer userId;
+    private Integer userId; //主键
     private String userName;
     private String userEmail;
     private String password;
     private String userPortraitPath; //存储头像的项目路径
     private Boolean userRole = false; //普通用户和管理员的标识，非数据库字段。true表示admin
+    private List<Song> allSongs;    // 用户收藏的所有歌曲
+
 
     public User() {
     }
@@ -64,6 +67,14 @@ public class User implements Serializable {
 
     public void setUserRole(Boolean userRole) {
         this.userRole = userRole;
+    }
+
+    public List<Song> getAllSongs() {
+        return allSongs;
+    }
+
+    public void setAllSongs(List<Song> allSongs) {
+        this.allSongs = allSongs;
     }
 
     @Override

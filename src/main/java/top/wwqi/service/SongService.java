@@ -14,14 +14,14 @@ public interface SongService {
      *
      * @return
      */
-    List<Song> findAllSong();
+    List<String> findAllSong(int userId);
 
     /**
      * 收藏歌曲
      *
      * @return  歌曲
      */
-    Integer collect();
+    void collect(Song song);
 
     /**
      * 取消收藏歌曲
@@ -29,4 +29,11 @@ public interface SongService {
      * @return
      */
     Integer cancelCollect();
+
+    /**
+     * 中间表插入数据
+     * @param songId
+     * @param userId
+     */
+    void insertSong2user(Integer songId, int userId);
 }

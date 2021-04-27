@@ -9,12 +9,12 @@ import java.util.List;
  */
 public class Song implements Serializable {
     private static final long serialVersionUID = -3403484846021090945L;
-
     private Integer songId;  //主键
     private String songMid;  //歌曲唯一标识
-    private List[] allUser;  //收藏该歌曲的所有用户
+    private List<User> allUser;  //收藏该歌曲的所有用户
 
-    public Song() {
+    public Song(String songMid) {
+        this.songMid = songMid;
     }
 
     public Integer getSongId() {
@@ -33,11 +33,11 @@ public class Song implements Serializable {
         this.songMid = songMid;
     }
 
-    public List[] getAllUser() {
+    public List<User> getAllUser() {
         return allUser;
     }
 
-    public void setAllUser(List[] allUser) {
+    public void setAllUser(List<User> allUser) {
         this.allUser = allUser;
     }
 }

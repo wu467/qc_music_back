@@ -34,5 +34,11 @@
     <input type="submit" value="登录"> <br/>
 </form>
 
+<br/>
+<a href="/songs/favoriteSong">测试收藏歌曲</a>
+
+
+
+
 </body>
 </html>
