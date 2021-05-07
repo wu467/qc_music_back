@@ -30,7 +30,14 @@ public class NoticeServiceImpl implements NoticeService {
     }
 
     /**
-     * 根据通知id删除
+     * 根据通知id删除setTimer() {
+     *                 if(this.timer == null) {
+     *                     this.timer = setInterval( () => {
+     *                         console.log('开始定时...每过一秒执行一次')
+     *                     }, 1000)
+     *                 }
+     *             }
+     * ————————————————
      * @param notice_id 系统通知id
      */
     @Override

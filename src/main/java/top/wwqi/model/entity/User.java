@@ -13,7 +13,7 @@ public class User implements Serializable {
     private String userName;
     private String userEmail;
     private String password;
-    private String userPortraitPath; //存储头像的项目路径
+    private String userPortraitPath = "https://thirdqq.qlogo.cn/g?b=sdk&k=BicK8wRNSiaxVuUxSDSkkH9A&s=140&t=1617896099"; //存储头像的项目路径
     private Boolean userRole = false; //普通用户和管理员的标识，非数据库字段。true表示admin
     private List<Song> allSongs;    // 用户收藏的所有歌曲
 

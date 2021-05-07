@@ -28,12 +28,12 @@ public interface SongService {
      *
      * @return
      */
-    Integer cancelCollect();
+    void cancelCollect(int userId, String songMid);
 
     /**
      * 中间表插入数据
      * @param songId
      * @param userId
      */
-    void insertSong2user(Integer songId, int userId);
+    void insertSong2user(int songId, int userId);
 }

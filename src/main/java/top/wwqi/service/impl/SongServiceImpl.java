@@ -25,7 +25,7 @@ public class SongServiceImpl implements SongService {
     @Override
     public List<String> findAllSong(int userId) {
         List<String> allSong = songMapper.findAllSong(userId);
-        return null;
+        return allSong;
     }
 
     /**
@@ -35,16 +35,24 @@ public class SongServiceImpl implements SongService {
      */
     @Override
     public void collect(Song song) {
+        // 收藏歌曲前先根据songMid查询数据库中是否已存在该歌曲
+        //Integer songId = songMapper.findBySongMid(song.getSongMid());
         songMapper.collect(song);
     }
 
     /**
      * 取消收藏歌曲
+     * 根据songMid查询出song_id，再通过传过来的user_id在表song2user中删除匹配的数据
      * @return
      */
     @Override
-    public Integer cancelCollect() {
-        return null;
+    public void cancelCollect(int userId, String songMid) {
+        try {
+            Integer songId = songMapper.findBySongMid(songMid);
+            songMapper.delCollect(songId,userId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -53,7 +61,7 @@ public class SongServiceImpl implements SongService {
      * @param userId
      */
     @Override
-    public void insertSong2user(Integer songId, int userId) {
+    public void insertSong2user(int songId, int userId) {
         songMapper.insertSong2user(userId, songId);
     }
 }

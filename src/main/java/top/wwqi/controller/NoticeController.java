@@ -27,7 +27,7 @@ public class NoticeController {
         System.out.println("表现层查询所有系统通知 test");
         //调用service的方法
         List<Notice> list = noticeService.findAllNotice();
-        return new JsonResult<>(list);
+        return new JsonResult<>(list,"查询所有通知");
     }
 
     /**

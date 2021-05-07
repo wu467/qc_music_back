@@ -1,9 +1,6 @@
 package top.wwqi.dao;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import top.wwqi.model.entity.Song;
 
 import java.util.List;
@@ -12,6 +9,14 @@ import java.util.List;
  * 歌曲 mapper
  */
 public interface SongMapper {
+
+    /**
+     * 通过songMid查询歌曲sing_id
+     * @param songMid
+     * @return
+     */
+    @Select("SELECT songId FROM song WHERE songMid = #{songMid}")
+    Integer findBySongMid(String songMid);
 
     /**
      * 返回所有收藏歌曲的songMid歌曲
@@ -32,19 +37,22 @@ public interface SongMapper {
     @Insert("INSERT INTO song (songMid) VALUES (#{s.songMid}) ")
     void collect(@Param("s")Song song);
 
-
     /**
-     * 取消收藏歌曲
-     *
-     * @return
+     * 取消用户收藏歌曲
+     * @param songId
+     * @param userId
      */
-    Integer cancelCollect();
+    @Delete("DELETE FROM song2user WHERE song_id=#{songId} AND user_id=#{userId}")
+    void delCollect(@Param("songId") Integer songId, @Param("userId") int userId);
 
     /**
      * 中间表插入数据
+     * 当方法的参数为两个及以上时就需要注解@Param("")来区分
      * @param userId
      * @param songId
      */
     @Insert("INSERT INTO song2user (song_id, user_id) VALUES (#{songId}, #{userId})")
     void insertSong2user(@Param("userId")int userId, @Param("songId") int songId);
+
+
 }

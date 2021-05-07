@@ -42,6 +42,29 @@ public class UserController {
         return result;
     }
 
+    /**
+     * 用户退出登录
+     *
+     * @return
+     */
+    public JsonResult signOut(){
+
+        return null;
+    }
+
+    /**
+     * 上传头像
+     */
+    public void uploadAvatar(){
+
+    }
+
+    /**
+     * 修改密码
+     */
+    public void resPassword(){
+
+    }
 
 
 
