@@ -29,7 +29,6 @@ public class SongController {
         Song song = new Song(songMid);
         songService.collect(song);
         songService.insertSong2user(song.getSongId(), userId);
-
         return new JsonResult("200","收藏成功！");
     }
 

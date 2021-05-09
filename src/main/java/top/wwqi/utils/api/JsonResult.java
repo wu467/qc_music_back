@@ -42,6 +42,17 @@ public class JsonResult<T> implements Serializable {
     }
 
     /**
+     * 有数据返回，状态码为 200，人为指定提示信息
+     * @param data
+     * @param msg
+     */
+    public JsonResult(int code, T data, String msg) {
+        this.data = data;
+        this.code = code;
+        this.msg = msg;
+    }
+
+    /**
      * get、set方法
      * @return
      */

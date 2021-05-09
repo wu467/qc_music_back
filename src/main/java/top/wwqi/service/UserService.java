@@ -22,4 +22,11 @@ public interface UserService {
      * @return
      */
     JsonResult<User> executeLogin(LoginDTO dto);
+
+    /**
+     * 检查用户注册时邮箱是否重复
+     * @param emailAddress
+     * @return
+     */
+    int checkEmail(String emailAddress);
 }

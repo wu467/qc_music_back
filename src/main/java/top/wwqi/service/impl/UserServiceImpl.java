@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public JsonResult executeRegister(RegisterDTO dto) {
         // 查询是否有相同的用户名或email
-        User user1 = userMapper.findByName(dto.getName());
+        User user1 = userMapper.findByName(dto.getUserName());
         User user2 = userMapper.findByEmail(dto.getEmail());
 
         if (!StringUtils.isEmpty(user1)) {
@@ -52,6 +52,22 @@ public class UserServiceImpl implements UserService {
         }
         return new JsonResult(user,"登录成功！");
     }
+
+
+    /**
+     * 用户注册时验证邮箱是否已被注册
+     * @param emailAddress  前端传过来的注册邮箱
+     * @return
+     */
+    @Override
+    public int checkEmail(String emailAddress) {
+        User user = userMapper.findByEmail(emailAddress);
+        if (StringUtils.isEmpty(user)){
+            return 0;
+        }
+        return 1;
+    }
+
 
 
 }
