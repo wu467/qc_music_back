@@ -30,13 +30,6 @@ public interface UserMapper {
     @Select("select * from user where userEmail = #{email}")
     User findByEmail(@Param("email")String email);
 
-    /**
-     * 登录时核对信息
-     * @param dto 前端传过来的登录对象
-     * @return
-     */
-    @Select("select * from user where userName = #{dto.name} and password = #{dto.password}")
-    User findUser(@Param("dto") LoginDTO dto);
 
     /**
      * 注册 添加用户

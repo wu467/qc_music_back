@@ -3,17 +3,19 @@ package top.wwqi.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import top.wwqi.model.dto.LoginDTO;
 import top.wwqi.model.dto.RegisterDTO;
 import top.wwqi.model.entity.User;
 import top.wwqi.service.UserService;
 import top.wwqi.utils.api.JsonResult;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Enumeration;
 
 @Controller
 @RequestMapping("/user")
@@ -39,6 +41,7 @@ public class UserController {
             e.printStackTrace();
         }
         JsonResult result= userService.executeRegister(register);
+
         return result;
     }
 
@@ -49,8 +52,26 @@ public class UserController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult<User> login(LoginDTO dto){
-        JsonResult<User> result = userService.executeLogin(dto);
+    public JsonResult<User> login(@RequestParam("loginDTO")String dto, HttpServletRequest request, HttpServletResponse response){
+        System.out.println(dto);
+        ObjectMapper mapper = new ObjectMapper();
+        LoginDTO login = null;
+        try {
+            login = mapper.readValue(dto, LoginDTO.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        JsonResult<User> result = userService.executeLogin(login, request, response);
+
+        //获取所有请求头名称
+        Enumeration<String> headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            String name = headerNames.nextElement();
+            //根据名称获取请求头的值
+            String value = request.getHeader(name);
+            System.out.println(name+"---"+value);
+        }
+
         return result;
     }
 
@@ -72,9 +93,12 @@ public class UserController {
      *
      * @return
      */
-    public JsonResult signOut(){
-
-        return null;
+    @RequestMapping(value = "/signOut", method = RequestMethod.GET)
+    public String signOut(HttpSession session){
+        session.removeAttribute("user");
+        System.out.println(session.getAttributeNames());
+        session.invalidate();
+        return "redirect:/login";
     }
 
     /**

@@ -1,5 +1,6 @@
 package top.wwqi.service.impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -9,6 +10,11 @@ import top.wwqi.model.dto.RegisterDTO;
 import top.wwqi.model.entity.User;
 import top.wwqi.service.UserService;
 import top.wwqi.utils.api.JsonResult;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -43,14 +49,45 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public JsonResult<User> executeLogin(LoginDTO dto) {
+    public JsonResult executeLogin(LoginDTO dto, HttpServletRequest request, HttpServletResponse response) {
+        JsonResult result = new JsonResult<>();
         // 查询用户名及密码是否匹配
-        User user = userMapper.findUser(dto);
+        User user = userMapper.findByName(dto.getUserName());
         System.out.println("测试前：" + dto);
         if (StringUtils.isEmpty(user)) {
-            return new JsonResult("300","登陆失败");
+            result.setCode(0);
+            result.setMsg("用户名不存在！");
+            return result;
+        } else if (!user.getPassword().equals(dto.getPassword())) {
+            result.setCode(0);
+            result.setMsg("密码错误！");
+            return result;
+        } else {
+            // 登陆成功
+            result.setCode(200);
+            result.setData(user);
+            result.setMsg("登录成功");
+            System.out.println("登录成功");
+            System.out.println(result.getData());
+            // 是否记住我
+//          String rememberme = request.getParameter("rememberme");
+
+            // 添加session
+            request.getSession().setAttribute("user", user);
+
+
+            //添加cookie
+            //创建Cookie对象
+            Cookie nameCookie = new Cookie("username", user.getUserName());
+            Cookie pwdCookie = new Cookie("password", user.getPassword());
+            //设置Cookie的有效期为2天
+            nameCookie.setMaxAge(60 * 60 * 24 * 2);
+            pwdCookie.setMaxAge(60 * 60 * 24 * 2);
+            response.addCookie(pwdCookie);
+            response.addCookie(nameCookie);
+
+            return result;
         }
-        return new JsonResult(user,"登录成功！");
     }
 
 

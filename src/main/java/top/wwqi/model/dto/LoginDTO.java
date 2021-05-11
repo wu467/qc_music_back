@@ -4,16 +4,16 @@ package top.wwqi.model.dto;
  * 前端传过来的登录DTO
  */
 public class LoginDTO {
-    private String name;
+    private String userName;
     private String password;
     private boolean userRole;
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String useName) {
+        this.userName = useName;
     }
 
     public String getPassword() {
@@ -35,7 +35,7 @@ public class LoginDTO {
     @Override
     public String toString() {
         return "LoginDTO{" +
-                "name='" + name + '\'' +
+                "userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", userRole=" + userRole +
                 '}';

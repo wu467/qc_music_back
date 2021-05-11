@@ -6,6 +6,9 @@ import top.wwqi.model.dto.RegisterDTO;
 import top.wwqi.model.entity.User;
 import top.wwqi.utils.api.JsonResult;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @Repository
 public interface UserService {
 
@@ -19,9 +22,11 @@ public interface UserService {
     /**
      * 用户登录
      * @param dto
+     * @param request
+     * @param response
      * @return
      */
-    JsonResult<User> executeLogin(LoginDTO dto);
+    JsonResult executeLogin(LoginDTO dto, HttpServletRequest request, HttpServletResponse response);
 
     /**
      * 检查用户注册时邮箱是否重复
