@@ -13,9 +13,9 @@ import top.wwqi.utils.api.JsonResult;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Enumeration;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 @Controller
 @RequestMapping("/user")
@@ -31,7 +31,7 @@ public class UserController {
      */
     @RequestMapping(value ="/register", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult register(@RequestParam("registerDTO")String dto) {
+    public JsonResult register(@RequestParam("registerDTO")String dto,  HttpServletRequest request) {
         System.out.println("前端传过来的DTO"+dto);
         ObjectMapper mapper = new ObjectMapper();
         RegisterDTO register = null;
@@ -52,7 +52,7 @@ public class UserController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult<User> login(@RequestParam("loginDTO")String dto, HttpServletRequest request, HttpServletResponse response){
+    public JsonResult<User> login(@RequestParam("loginDTO")String dto, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
         System.out.println(dto);
         ObjectMapper mapper = new ObjectMapper();
         LoginDTO login = null;
@@ -63,13 +63,14 @@ public class UserController {
         }
         JsonResult<User> result = userService.executeLogin(login, request, response);
 
-        //获取所有请求头名称
-        Enumeration<String> headerNames = request.getHeaderNames();
-        while (headerNames.hasMoreElements()) {
-            String name = headerNames.nextElement();
-            //根据名称获取请求头的值
-            String value = request.getHeader(name);
-            System.out.println(name+"---"+value);
+        //测试：待删除  获取cookie
+        Cookie[] cookies = request.getCookies();
+        if(cookies != null && cookies.length > 0){
+            for (Cookie cookie : cookies){
+                System.out.println("--------------------------------");
+                System.out.println(URLDecoder.decode(cookie.getName(), "UTF-8")  + "-----" + URLDecoder.decode(cookie.getValue(),"UTF-8"));
+                System.out.println("--------------------------------");
+            }
         }
 
         return result;
@@ -94,11 +95,31 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/signOut", method = RequestMethod.GET)
-    public String signOut(HttpSession session){
-        session.removeAttribute("user");
-        System.out.println(session.getAttributeNames());
-        session.invalidate();
-        return "redirect:/login";
+    public String signOut(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+
+        //获取cookie
+        Cookie[] cookies = request.getCookies();
+        if(cookies != null && cookies.length > 0){
+            System.out.println("------------退出登录------------");
+            for (Cookie cookie : cookies){
+                System.out.println(URLDecoder.decode(cookie.getName(), "UTF-8")  + "-----" + URLDecoder.decode(cookie.getValue(),"UTF-8"));
+            }
+        }
+
+
+        //清除cookie信息
+        for (Cookie cookie :cookies){//遍历所有Cookie
+            if(cookie.getName().equals("username") || cookie.getName().equals("password")){//找到对应的cookie
+                cookie.setMaxAge(0);//Cookie并不能根本意义上删除，只需要这样设置为0即可
+                cookie.setPath("/");//很关键，设置成跟写入cookies一样的，全路径共享Cookie
+                response.addCookie(cookie);//重新响应
+                System.out.println("清除cookie信息");
+            }
+            System.out.println("遍历");
+            System.out.println(cookie.getName());
+        }
+
+        return "success";
     }
 
     /**

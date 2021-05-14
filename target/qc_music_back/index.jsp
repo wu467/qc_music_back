@@ -45,6 +45,13 @@
 <a href="/songs/cancelFavoriteSong">取消收藏歌曲</a> <br/>
 
 
+<br/><br/>
+<h1>收藏歌曲</h1>
+<form action="/songs/favoriteSong" method="post" enctype="application/x-www-form-urlencoded;charset=utf-8">
+    <span>用户id</span> <input type="number" name="userId"/><br/>
+    <span>歌曲id</span> <input type="text" name="songMid"/> <br/>
+    <input type="submit" value="提交"/>
+</form>
 
 
 </body>

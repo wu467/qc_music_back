@@ -8,6 +8,11 @@ import top.wwqi.model.entity.Notice;
 import top.wwqi.service.NoticeService;
 import top.wwqi.utils.api.JsonResult;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.util.Enumeration;
 import java.util.List;
 
 @Controller
@@ -23,10 +28,24 @@ public class NoticeController {
      */
     @RequestMapping("findAllNotice")
     @ResponseBody
-    public JsonResult<List<Notice>> findAllNotice(){
+    public JsonResult<List<Notice>> findAllNotice(HttpServletRequest request){
         System.out.println("表现层查询所有系统通知 test");
         //调用service的方法
         List<Notice> list = noticeService.findAllNotice();
+
+        //获取cookie
+        Cookie[] cookies = request.getCookies();
+        if(cookies != null && cookies.length > 0){
+            System.out.println("------------系统通知------------");
+            for (Cookie cookie : cookies){
+                try {
+                    System.out.println(URLDecoder.decode(cookie.getName(), "UTF-8")  + "-----" + URLDecoder.decode(cookie.getValue(),"UTF-8"));
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
         return new JsonResult<>(list,"查询所有通知");
     }
 

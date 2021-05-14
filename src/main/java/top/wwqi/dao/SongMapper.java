@@ -19,7 +19,7 @@ public interface SongMapper {
     Integer findBySongMid(String songMid);
 
     /**
-     * 返回所有收藏歌曲的songMid歌曲
+     * 返回所有收藏歌曲的songMid
      *
      * @return 歌曲集合
      */
@@ -28,7 +28,7 @@ public interface SongMapper {
 
     /**
      * 收藏歌曲
-     * 先将收藏的歌曲添加到表 song 中，然后获取song表的主键songId，
+     * 先将收藏的歌曲添加到表 song 中，然后获取song表的主键songId，该主键songMid会自动赋值给 song对象的songId
      * 再将songId和userId插入到关系表song2user中。
      * @return  歌曲
      */

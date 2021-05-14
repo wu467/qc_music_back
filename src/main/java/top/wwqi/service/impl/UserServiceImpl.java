@@ -15,6 +15,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -75,15 +77,27 @@ public class UserServiceImpl implements UserService {
             // 添加session
             request.getSession().setAttribute("user", user);
 
-
             //添加cookie
-            //创建Cookie对象
-            Cookie nameCookie = new Cookie("username", user.getUserName());
-            Cookie pwdCookie = new Cookie("password", user.getPassword());
-            //设置Cookie的有效期为2天
-            nameCookie.setMaxAge(60 * 60 * 24 * 2);
-            pwdCookie.setMaxAge(60 * 60 * 24 * 2);
-            response.addCookie(pwdCookie);
+            //创建Cookie对象。并设置编码为utf8，解决存入cookie乱码问题
+            Cookie nameCookie = null;
+            Cookie idCookie = null;
+            try {
+                nameCookie = new Cookie("username", URLEncoder.encode(user.getUserName(), "UTF-8"));
+                idCookie = new Cookie("userId", URLEncoder.encode(user.getUserId().toString(), "UTF-8"));
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            // 设置可以通过程序（js脚本、applet等）获取cookie
+            nameCookie.setHttpOnly(false);
+            idCookie.setHttpOnly(false);
+            //设置Cookie的有效期为1天
+            nameCookie.setMaxAge(60 * 60 * 24);
+            idCookie.setMaxAge(60 * 60 * 24);
+            //设置根目录下的所有目录都可以共享信息
+            nameCookie.setPath("/");
+            idCookie.setPath("/");
+            //响应给浏览器添加的cookie
+            response.addCookie(idCookie);
             response.addCookie(nameCookie);
 
             return result;

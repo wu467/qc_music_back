@@ -21,7 +21,7 @@ public interface SongService {
      *
      * @return  歌曲
      */
-    void collect(Song song);
+    int collect(Song song);
 
     /**
      * 取消收藏歌曲
