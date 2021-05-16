@@ -50,10 +50,9 @@ public class SongServiceImpl implements SongService {
      * @return
      */
     @Override
-    public void cancelCollect(int userId, String songMid) {
+    public void cancelCollect(int userId, int songId) {
         try {
-            Integer songId = songMapper.findBySongMid(songMid);
-            songMapper.delCollect(songId,userId);
+            songMapper.delCollect(userId,songId);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -43,7 +43,7 @@ public interface SongMapper {
      * @param userId
      */
     @Delete("DELETE FROM song2user WHERE song_id=#{songId} AND user_id=#{userId}")
-    void delCollect(@Param("songId") Integer songId, @Param("userId") int userId);
+    void delCollect(@Param("userId")int userId, @Param("songId") int songId);
 
     /**
      * 中间表插入数据

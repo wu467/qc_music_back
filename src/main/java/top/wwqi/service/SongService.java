@@ -28,7 +28,7 @@ public interface SongService {
      *
      * @return
      */
-    void cancelCollect(int userId, String songMid);
+    void cancelCollect(int userId, int songId);
 
     /**
      * 中间表插入数据
