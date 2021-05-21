@@ -11,21 +11,18 @@ public interface SongService {
 
     /**
      * 返回用户所有歌曲
-     *
      * @return
      */
     List<String> findAllSong(int userId);
 
     /**
      * 收藏歌曲
-     *
      * @return  歌曲
      */
     int collect(Song song);
 
     /**
      * 取消收藏歌曲
-     *
      * @return
      */
     void cancelCollect(int userId, int songId);
@@ -36,4 +33,6 @@ public interface SongService {
      * @param userId
      */
     void insertSong2user(int songId, int userId);
+
+    int findByMiddle(int userId, int songId);
 }

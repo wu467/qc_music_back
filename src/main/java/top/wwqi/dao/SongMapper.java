@@ -19,7 +19,7 @@ public interface SongMapper {
     Integer findBySongMid(String songMid);
 
     /**
-     * 返回所有收藏歌曲的songMid
+     * 返回用户所有收藏歌曲的songMid
      *
      * @return 歌曲集合
      */
@@ -54,5 +54,11 @@ public interface SongMapper {
     @Insert("INSERT INTO song2user (song_id, user_id) VALUES (#{songId}, #{userId})")
     void insertSong2user(@Param("userId")int userId, @Param("songId") int songId);
 
-
+    /**
+     * 从中间表查询数据
+     * @param userId
+     * @param songId
+     */
+    @Select("Select id FROM song2user WHERE user_id=#{userId} AND  song_id=#{songId}")
+    Integer findByMiddle(@Param("userId")int userId, @Param("songId") int songId);
 }
