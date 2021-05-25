@@ -3,8 +3,7 @@ package top.wwqi.service;
 import org.springframework.stereotype.Repository;
 import top.wwqi.model.dto.LoginDTO;
 import top.wwqi.model.dto.RegisterDTO;
-import top.wwqi.model.entity.User;
-import top.wwqi.utils.api.JsonResult;
+import top.wwqi.utils.JsonResult;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,6 +33,15 @@ public interface UserService {
      * @return
      */
     int checkEmail(String emailAddress);
+
+    /**
+     * 通过邮箱修改密码
+     * @param newPassword
+     * @param email
+     * @param password
+     * @return
+     */
+    int modifyPasswordByEmail(String newPassword, String email, String password);
 
 
 }

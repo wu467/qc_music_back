@@ -6,13 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.wwqi.model.entity.Notice;
 import top.wwqi.service.NoticeService;
-import top.wwqi.utils.api.JsonResult;
+import top.wwqi.utils.JsonResult;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.util.Enumeration;
 import java.util.List;
 
 @Controller

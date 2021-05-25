@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.wwqi.model.entity.Song;
 import top.wwqi.service.SongService;
-import top.wwqi.utils.api.JsonResult;
+import top.wwqi.utils.JsonResult;
 
 import java.util.List;
 

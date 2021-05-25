@@ -8,7 +8,8 @@ import top.wwqi.model.dto.LoginDTO;
 import top.wwqi.model.dto.RegisterDTO;
 import top.wwqi.model.entity.User;
 import top.wwqi.service.UserService;
-import top.wwqi.utils.api.JsonResult;
+import top.wwqi.utils.JsonResult;
+import top.wwqi.utils.MailUtils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +32,7 @@ public class UserController {
      */
     @RequestMapping(value ="/register", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult register(@RequestParam("registerDTO")String dto,  HttpServletRequest request) {
+    public JsonResult register(@RequestParam("registerDTO")String dto) {
         System.out.println("前端传过来的DTO"+dto);
         ObjectMapper mapper = new ObjectMapper();
         RegisterDTO register = null;
@@ -78,7 +79,7 @@ public class UserController {
 
 
     /**
-     * 注册时，验证邮箱是否已存在
+     * 注册时，异步验证邮箱是否已存在(即当用户填完邮箱后就会执行，第一时间验证邮箱是否注册)
      * @return  1 为已存在， 0为不存在
      */
     @RequestMapping(value = "/checkEmail", method = RequestMethod.POST)
@@ -123,21 +124,33 @@ public class UserController {
     }
 
     /**
-     * 上传头像
+     * 发送验证码到用户邮箱,返回生成的验证码
+     * @param toEmailAddress
      */
-    public void uploadAvatar(){
-
+    public void sendVerificationCode(String toEmailAddress){
+        MailUtils.sendMail(toEmailAddress, ,"晴川音乐");
     }
 
     /**
      * 修改密码
+     * @param newPassword
+     * @param email
+     * @param password
+     *
+     * 修改密码前先获取当前用户邮箱，后台随机生成六位验证码存储下来并发送到用户邮箱，前端获取验证码按钮禁用60s。用户提交
+     * 修改后，将传过来的验证码与后端生成的验证码比对，相同则执行更新操作。
      */
-    public void resPassword(){
-
+    @RequestMapping("/resPassword")
+    @ResponseBody
+    public void resPassword(String newPassword, String email, String password){
+        try {
+            int result = userService.modifyPasswordByEmail(newPassword, email, password);
+            if (result == 1){
+                new JsonResult(200, "密码修改成功");
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
-
-
-
-
-
 }
+

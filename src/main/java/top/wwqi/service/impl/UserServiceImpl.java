@@ -1,6 +1,5 @@
 package top.wwqi.service.impl;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -9,12 +8,11 @@ import top.wwqi.model.dto.LoginDTO;
 import top.wwqi.model.dto.RegisterDTO;
 import top.wwqi.model.entity.User;
 import top.wwqi.service.UserService;
-import top.wwqi.utils.api.JsonResult;
+import top.wwqi.utils.JsonResult;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
@@ -119,6 +117,18 @@ public class UserServiceImpl implements UserService {
         return 1;
     }
 
+    /**
+     * 通过邮箱修改密码
+     * @param newPassword
+     * @param email
+     * @param password
+     * @return
+     */
+    @Override
+    public int modifyPasswordByEmail(String newPassword, String email, String password) {
+        userMapper.modifyPasswordByEmail(newPassword, email);
+        return 1;
+    }
 
 
 }
