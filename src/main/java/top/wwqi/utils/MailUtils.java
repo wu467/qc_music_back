@@ -70,6 +70,10 @@ public final class MailUtils {
     }
 
 
+    /**
+     * 测试，待删除
+     * @throws Exception
+     */
     @Test
     public void testEmail() throws Exception {
         MailUtils.sendMail("3180007635@qq.com","你好，这是一封测试邮件，无需回复。","测试邮件");

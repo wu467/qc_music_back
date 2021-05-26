@@ -34,13 +34,13 @@ public class UserServiceImpl implements UserService {
         User user2 = userMapper.findByEmail(dto.getEmail());
 
         if (!StringUtils.isEmpty(user1)) {
-            return new JsonResult("300","注册失败，用户名已注册");
+            return new JsonResult(300,"注册失败，用户名已注册");
         } else if (!StringUtils.isEmpty(user2)) {
-            return new JsonResult("300","注册失败，邮箱已注册");
+            return new JsonResult(300,"注册失败，邮箱已注册");
         }
         // 执行注册
         userMapper.insertUser(dto);
-        return new JsonResult("200","注册成功");
+        return new JsonResult(200,"注册成功");
     }
 
     /**
@@ -79,22 +79,28 @@ public class UserServiceImpl implements UserService {
             //创建Cookie对象。并设置编码为utf8，解决存入cookie乱码问题
             Cookie nameCookie = null;
             Cookie idCookie = null;
+            Cookie emailCookie = null;
             try {
                 nameCookie = new Cookie("username", URLEncoder.encode(user.getUserName(), "UTF-8"));
                 idCookie = new Cookie("userId", URLEncoder.encode(user.getUserId().toString(), "UTF-8"));
+                emailCookie = new Cookie("userMail", URLEncoder.encode(user.getUserEmail().toString(), "UTF-8"));
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
             // 设置可以通过程序（js脚本、applet等）获取cookie
             nameCookie.setHttpOnly(false);
             idCookie.setHttpOnly(false);
+            emailCookie.setHttpOnly(false);
             //设置Cookie的有效期为1天
             nameCookie.setMaxAge(60 * 60 * 24);
             idCookie.setMaxAge(60 * 60 * 24);
+            emailCookie.setMaxAge(60 * 60 * 24);
             //设置根目录下的所有目录都可以共享信息
             nameCookie.setPath("/");
             idCookie.setPath("/");
+            emailCookie.setPath("/");
             //响应给浏览器添加的cookie
+            response.addCookie(emailCookie);
             response.addCookie(idCookie);
             response.addCookie(nameCookie);
 
@@ -121,11 +127,10 @@ public class UserServiceImpl implements UserService {
      * 通过邮箱修改密码
      * @param newPassword
      * @param email
-     * @param password
      * @return
      */
     @Override
-    public int modifyPasswordByEmail(String newPassword, String email, String password) {
+    public int modifyPasswordByEmail(String newPassword, String email) {
         userMapper.modifyPasswordByEmail(newPassword, email);
         return 1;
     }

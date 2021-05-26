@@ -124,33 +124,39 @@ public class UserController {
     }
 
     /**
-     * 发送验证码到用户邮箱,返回生成的验证码
-     * @param toEmailAddress
+     * 前端生成验证码并发送到后端，后端接收后发送验证码到用户邮箱
+     * @param yzm  验证码
+     * @param toEmailAddress 用户邮箱
      */
-    public void sendVerificationCode(String toEmailAddress){
-        MailUtils.sendMail(toEmailAddress, ,"晴川音乐");
+    @RequestMapping(value = "/sendCode", method = RequestMethod.POST)
+    @ResponseBody
+    public JsonResult sendVerificationCode(@RequestParam("yzm")String yzm, @RequestParam("uEmail") String toEmailAddress){
+        MailUtils.sendMail(toEmailAddress, yzm,"晴川音乐");
+        return new JsonResult(200,"激活码已发送");
     }
 
     /**
      * 修改密码
      * @param newPassword
      * @param email
-     * @param password
      *
-     * 修改密码前先获取当前用户邮箱，后台随机生成六位验证码存储下来并发送到用户邮箱，前端获取验证码按钮禁用60s。用户提交
+     * 修改密码前先获取当前用户邮箱，前端随机生成六位验证码存储下来并发送给后端，前端获取验证码按钮禁用60s。用户提交
      * 修改后，将传过来的验证码与后端生成的验证码比对，相同则执行更新操作。
      */
-    @RequestMapping("/resPassword")
+    @RequestMapping(value = "/resPassword", method = RequestMethod.POST)
     @ResponseBody
-    public void resPassword(String newPassword, String email, String password){
+    public JsonResult resPassword(@RequestParam("newPasswd") String newPassword, @RequestParam("uEmail") String email){
+        JsonResult jsonResult = new JsonResult(301,"修改失败！");
         try {
-            int result = userService.modifyPasswordByEmail(newPassword, email, password);
+            int result = userService.modifyPasswordByEmail(newPassword, email);
             if (result == 1){
-                new JsonResult(200, "密码修改成功");
+                jsonResult.setCode(200);
+                jsonResult.setMsg("密码修改成功");
             }
         } catch(Exception e){
             e.printStackTrace();
         }
+        return jsonResult;
     }
 }
 

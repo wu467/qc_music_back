@@ -38,10 +38,9 @@ public interface UserService {
      * 通过邮箱修改密码
      * @param newPassword
      * @param email
-     * @param password
      * @return
      */
-    int modifyPasswordByEmail(String newPassword, String email, String password);
+    int modifyPasswordByEmail(String newPassword, String email);
 
 
 }
