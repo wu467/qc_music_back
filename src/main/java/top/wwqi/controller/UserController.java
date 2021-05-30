@@ -124,7 +124,7 @@ public class UserController {
     }
 
     /**
-     * 前端生成验证码并发送到后端，后端接收后发送验证码到用户邮箱
+     * 前端生成验证码并发送到后端，后端接收后将验证码发送到用户邮箱
      * @param yzm  验证码
      * @param toEmailAddress 用户邮箱
      */

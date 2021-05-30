@@ -9,6 +9,15 @@ public class RegisterDTO {
     private String email;
     private String pass;
     private String checkPass;
+    private Integer yzm;
+
+    public Integer getYzm() {
+        return yzm;
+    }
+
+    public void setYzm(Integer yzm) {
+        this.yzm = yzm;
+    }
 
     public String getUserName() {
         return userName;
