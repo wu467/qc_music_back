@@ -106,11 +106,9 @@ public class UserController {
                 System.out.println(URLDecoder.decode(cookie.getName(), "UTF-8")  + "-----" + URLDecoder.decode(cookie.getValue(),"UTF-8"));
             }
         }
-
-
         //清除cookie信息
         for (Cookie cookie :cookies){//遍历所有Cookie
-            if(cookie.getName().equals("username") || cookie.getName().equals("password")){//找到对应的cookie
+            if(cookie.getName().equals("username") || cookie.getName().equals("userMail") || cookie.getName().equals("userId")){//找到对应的cookie
                 cookie.setMaxAge(0);//Cookie并不能根本意义上删除，只需要这样设置为0即可
                 cookie.setPath("/");//很关键，设置成跟写入cookies一样的，全路径共享Cookie
                 response.addCookie(cookie);//重新响应
